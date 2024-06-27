@@ -1,0 +1,109 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+}
+.calculator {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: min-content;
+	background: #1b1b1b;
+	padding: 15px 10px;
+	border-radius: 5px;
+	box-shadow: 0px 5px 10px #1b1b1b;
+	transform: scale(2);
+}
+.calculator-bottom {
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+	gap: 5px;
+}
+.calculator-numbers > button,
+.calculator-function__buttons-top button,
+.calculator-function__buttons-right button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+}
+.calculator-function__buttons-top > button,
+.calculator-function__buttons-right > button {
+	color: #ffab08 !important;
+}
+.calculator-function__buttons-top,
+.calculator-function__buttons-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: max-content;
+	gap: 5px;
+}
+.calculator-function__buttons-top {
+	flex-direction: row;
+}
+.calculator-numbers  {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	padding-top: 5px;
+}
+.calculator-numbers > button,
+.calculator-function__buttons-top > button,
+.calculator-function__buttons-right > button {
+	color: #fff;
+	background: #1b1b1b;
+	border: 2px solid #101010;
+	border-radius: 50%;
+	box-shadow: -2px -2px 5px 0px #3f3f3f,  2px 2px 5px 0px #000000;
+	transition: all .15s;
+}
+.calculator-numbers > button:hover,
+.calculator-function__buttons-top > button:hover,
+.calculator-function__buttons-right > button:hover {
+	background: #ffab08;
+	color: #262b35 !important;
+}
+#btn-0 {
+	border-radius: 5px;
+	width: 100%;
+	grid-area: 4 / 1 / 5 / 3;
+}
+#btn-equal {
+	background: #ffab08;
+	color: #262b35 !important;
+}
+#btn-equal:hover {
+	color: #fff !important;
+	background: #1b1b1b;
+}
+#btn-negative,
+#btn-percent,
+#btn-clear {
+	font-size: 10px;
+	font-weight: 500;
+}
+input {
+	color: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: end;
+	background: none;
+	border: none;
+	padding: 7px 5px;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 3px 0px #3f3f3f, inset 2px 2px 3px 0px #000000;
+	padding-right: 8px;
+}
+input:focus {
+	outline: none;
+}
